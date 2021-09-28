@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
@@ -15,13 +15,46 @@
   </style>
 </head>
 <body>
+  <div class="ad-top">   Try it free 7 days then $20/mo. thereafter
+  </div>
+  <div class="grid-container">
+    <div class="side-description">
+      <h1>    Learn to code by watching others
+      </h1>
+      <p>  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="button-form-container">  
+      
+      <div class="form-container">
+        <form action="/action_page.php">
+          <div class="input-holder">
+          <input type="text" placeholder="First Name" id="first-name" name="first--name" required>
+          <span class="first--name-error error-span">Something is wrong </span> </div>
+          <div class="input-holder">
+          <input type="text" placeholder="Last Name" id="last-name" name="last--name" required>
+          <span class="last--name-error error-span">Something is wrong </span> </div>
+          
+          <div class="input-holder">
+          <input type="email" placeholder="Email address" id="email" name="email" required>
+          <span class="email-error error-span">Something is wrong </span> </div>
+            
+            <div class="input-holder">
+            <input type="password" id="psw" placeholder="Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <span class="pwd-error error-span">Something is wrong </span> </div>
+              
+<div>   
+          <input type="submit" value="Submit"> </div>
+        </form>
+      </div>
+      
+    
 
-  Learn to code by watching others
+  </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
 
-  Try it free 7 days then $20/mo. thereafter
+ 
+
 
   First Name 
   Last Name 
@@ -39,4 +72,5 @@
     </p>
   </footer>
 </body>
+<script src="script.js"></script>
 </html>

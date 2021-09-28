@@ -1,0 +1,61 @@
+body {
+    background-color: pink;
+}
+
+.ad-top {
+padding: 1rem;
+background-color: indigo;
+color: white;
+margin: 0 2rem;
+width: 50%;
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 2rem;
+}
+
+.side-description{
+   margin: auto;
+   text-align: center;
+
+
+}
+
+.form-container form div{
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+
+.form-container input {
+    padding: 0.8rem;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 1.2rem;
+    border: 0.07rem solid  lightgray;
+}
+.form-container input:active,
+.form-container input:focus{
+   outline: none;
+    border: 0.12rem solid black;
+}
+
+.error-span{
+    padding: 0;
+    margin: 0;
+    justify-content: right;
+    text-align: right;
+    background-color: lightgreen;
+    visibility: hidden;
+}
+
+.hasError{
+visibility: visible;
+}
