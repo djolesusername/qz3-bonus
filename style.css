@@ -1,29 +1,65 @@
+:root{
+    --custom-green : #38CC8B;
+    --custom-black : #3D3B48;
+    --custom-purple: #5E54A4;
+    --custom-red: #FF7979;
+
+}
+
 body {
-    background-color: pink;
+    background-image: linear-gradient(to bottom,  rgba(255, 121, 121, 0.75), rgba(255, 121, 120, 0.75)), url("./images/bg-intro-desktop.png");
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.ad-top {
-padding: 1rem;
-background-color: indigo;
-color: white;
-margin: 0 2rem;
-width: 50%;
 
-
-}
 
 .grid-container {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 0 2rem;
+    grid-template-rows: auto, 20px, repeat(5, auto);
+    background: transparent;
+    border-radius: 8px;
+    margin: 4rem 10rem;
 }
 
+.grid-container div {
+    min-height: 10px;
+}
+
+.ad-top {
+    background-color:  #5E54A4;
+text-align: center;
+    color: white;
+    grid-row: 1;
+    grid-column: 2;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+         }
+
+.ad-top .font-normal {
+    font-weight: 400;
+}
 .side-description{
    margin: auto;
    text-align: center;
-
-
+   color: white;
+   padding: 1rem;
 }
+
+.form-container{
+    grid-row: 3;
+    border-radius: 8px;
+  }
+
+.form-container form div:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+.form-container form div:last-of-type {
+    border-radius: 0px 0px 8px 8px;
+  }
 
 .form-container form div{
     background-color: white;
@@ -31,6 +67,7 @@ width: 50%;
     grid-template-rows: auto;
     padding: 1.5rem;
     padding-bottom: 0;
+
 }
 
 
@@ -41,6 +78,8 @@ width: 50%;
     padding-left: 1.2rem;
     border: 0.07rem solid  lightgray;
 }
+
+
 .form-container input:active,
 .form-container input:focus{
    outline: none;
@@ -52,10 +91,40 @@ width: 50%;
     margin: 0;
     justify-content: right;
     text-align: right;
-    background-color: lightgreen;
     visibility: hidden;
+    color: red;
 }
 
 .hasError{
 visibility: visible;
+}
+
+.h1{
+    font-size: 3rem;
+}
+
+#submit-form {
+background-color: var(--custom-green);
+color: white;
+}
+.padding {
+    min-height: 1rem;
+    background-color: transparent;
+}
+ .inputHasError{
+border: 1px solid var(--custom-red)!important;
+}
+
+.terms-div{
+  text-align: center;
+}
+
+.terms-div {
+    font-size: 0.8rem;
+    color: grey;
+    margin-bottom: 1rem;
+
+}
+.terms-div a {
+    color: var(--custom-red);
 }

@@ -21,24 +21,29 @@ function onInvalidForm  (e )  {
     console.log(e)
 
 //since we are checking only email validity at the moment only thing that has data and can be invalid is email
-if (e.originalTarget.value && e.target.id === "email") {
+if (e.originalTarget?.value && e.target.id === "email") {
     target_error.innerHTML = "Looks like this is not an email"
     target_error.classList.add("hasError");
+    e.target.classList.add("inputHasError")
 
     return
   }
 
 //Empty required fields check up 
-if (!e.originalTarget.value) {
+if (!e.originalTarget?.value) {
     let errorMessage = `${errorMessagePrefix[e.target.id]} cannot be empty `
     target_error.innerHTML = errorMessage
     target_error.classList.add("hasError");
+    e.target.classList.add("inputHasError")
+
 }
 
 };
 
 function clearErrors(e) {
-    e.originalTarget.nextElementSibling.classList.remove("hasError")
+    e.originalTarget?.nextElementSibling.classList.remove("hasError")
+    e.target.classList.remove("inputHasError")
+
 
 }
 
