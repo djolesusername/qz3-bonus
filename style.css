@@ -130,3 +130,27 @@ border: 1px solid var(--custom-red)!important;
 .terms-div a {
     color: var(--custom-red);
 }
+@media only screen and (max-width: 670px) {
+    .grid-container {
+        display: grid;
+       grid-template-columns: 100%;
+       margin: 1rem;
+          }
+    .ad-top {
+        grid-column: 1;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        grid-row: 2
+                 }
+       
+        .button-form-container{
+         border-radius: 8px;
+         grid-row: 3;
+  }        
+  .side-description {
+    grid-row: 1;
+  }  
+    }
+
