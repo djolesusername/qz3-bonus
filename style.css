@@ -20,11 +20,12 @@ body {
     grid-template-rows: auto, 20px, repeat(5, auto);
     background: transparent;
     border-radius: 8px;
-    margin: 4rem 10rem;
+    margin: 4rem 9rem;
+    grid-column-gap: 10px;
 }
 
 .grid-container div {
-    min-height: 10px;
+    min-height: 1rem;
 }
 
 .ad-top {
@@ -115,14 +116,15 @@ color: white;
 border: 1px solid var(--custom-red)!important;
 }
 
-.terms-div{
-  text-align: center;
-}
+
 
 .terms-div {
     font-size: 0.8rem;
     color: grey;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem !important;
+    text-align: center;
+ 
+
 
 }
 .terms-div a {
