@@ -17,14 +17,12 @@ function onInvalidForm(e) {
   let target_error = e.target.nextElementSibling;
   e.preventDefault();
 
-  console.log(e);
-
   //since we are checking only email validity at the moment only thing that has data and can be invalid is email
   if (e.originalTarget?.value && e.target.id === "email") {
     target_error.innerHTML = "Looks like this is not an email";
     target_error.classList.add("hasError");
     e.target.classList.add("inputHasError");
-
+    e.target.parentElement.classList.add("inputHasErrorDiv");
     return;
   }
 
@@ -34,12 +32,14 @@ function onInvalidForm(e) {
     target_error.innerHTML = errorMessage;
     target_error.classList.add("hasError");
     e.target.classList.add("inputHasError");
+    e.target.parentElement.classList.add("inputHasErrorDiv");
   }
 }
 
 function clearErrors(e) {
   e.originalTarget?.nextElementSibling.classList.remove("hasError");
   e.target.classList.remove("inputHasError");
+  e.target.parentElement.classList.remove("inputHasErrorDiv");
 }
 
 $firstname.addEventListener("input", clearErrors);

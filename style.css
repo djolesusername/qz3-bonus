@@ -111,6 +111,17 @@ body {
   border: 1px solid var(--custom-red) !important;
 }
 
+.input-holder {
+  position: relative;
+}
+.inputHasErrorDiv:after {
+  display: block;
+  content: url("./images/icon-error.svg");
+  position: absolute;
+  color: #5b5e5c;
+  right: 10%;
+  top: 2rem;
+}
 .terms-div {
   font-size: 0.8rem;
   color: grey;
@@ -120,11 +131,13 @@ body {
 .terms-div a {
   color: var(--custom-red);
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .grid-container {
     display: grid;
     grid-template-columns: 100%;
     margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   .ad-top {
     grid-column: 1;
